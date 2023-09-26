@@ -1,0 +1,20 @@
+### Adding Course
+
+POST http://localhost:8080/api/courses
+Content-Type: application/json
+
+{
+  "title": "Новый курс",
+  "beginDate": "2022-02-02",
+  "endDate": "2023-02-02",
+  "description": "Описание нового курса",
+  "price": 100.0
+}
+
+### Getting Courses
+
+GET http://localhost:8080/api/courses
+
+### Getting Course
+
+GET http://localhost:8080/api/courses/20
