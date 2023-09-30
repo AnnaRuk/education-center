@@ -43,7 +43,7 @@ public class NewCourseDto {
 
     @Schema(description = "price", example = "2000.00")
     @Min(value = 0)
-    @Max(value = 200)
+    @Max(value = 2000)
     private double price;
 
 }

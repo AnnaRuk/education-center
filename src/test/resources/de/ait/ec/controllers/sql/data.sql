@@ -9,3 +9,6 @@ values ('testTitle3', 'teatDescription3', '2020-10-03', '2020-10-03',3000.00,'DR
 
 insert into course(title, description, begin_date, end_date, price, state)
 values ('testTitle4', 'teatDescription4', '2020-10-04', '2020-10-04',4000.00,'DRAFT');
+
+insert into account(email, password, role)
+values ('anna22@gmail.com','Qwerty002!','USER');

@@ -4,11 +4,11 @@ POST http://localhost:8080/api/courses
 Content-Type: application/json
 
 {
-  "title": "Новый курс",
-  "beginDate": "2022-02-02",
-  "endDate": "2023-02-02",
-  "description": "Описание нового курса",
-  "price": 100.0
+  "title": "Новый курс 1",
+  "beginDate": "2023-02-01",
+  "endDate": "2024-02-01",
+  "description": "Описание нового курса 1",
+  "price": 1000.0
 }
 
 ### Getting Courses
@@ -18,3 +18,12 @@ GET http://localhost:8080/api/courses
 ### Getting Course
 
 GET http://localhost:8080/api/courses/20
+
+### Register of user
+POST http://localhost:8080/api/users/register
+Content-Type: application/json
+
+{
+  "email": "anna22@gmail.com",
+  "password": "Qwerty002!"
+}

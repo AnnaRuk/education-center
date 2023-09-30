@@ -110,6 +110,27 @@ class CoursesIntegrationTest {
 
 
         }
+
+        @Test
+        @DirtiesContext(methodMode = DirtiesContext.MethodMode.AFTER_METHOD)
+        public void return_400_for_not_valid_course_test() throws Exception {
+            mockMvc.perform(post("/api/courses")
+                            .contentType("application/json")
+                            .content("{\n" +
+                                    "  \"title\": \"Новый курс\",\n" +
+                                    "  \"beginDate\": \"2022-02-02\",\n" +
+                                    "  \"endDate\": \"2023-500000-02\",\n" +
+                                    "  \"description\": \"Описание нового курса\",\n" +
+                                    "  \"price\": 1009876.0\n" +
+                                    "}"))
+                    .andExpect(status().isBadRequest())
+                    .andExpect(jsonPath("$.errors.size()",is(2)));
+
+
+        }
+
+
+
     }
 
 
